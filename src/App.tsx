@@ -1,11 +1,11 @@
-import MainPage from "@/components/Pages/MainPage";
 import "./App.css";
 import Layout from "./components/Layout";
+import Service from "@/routes/service";
 
 function App() {
   return (
     <Layout>
-      <MainPage />
+      <Service />
     </Layout>
   );
 }
