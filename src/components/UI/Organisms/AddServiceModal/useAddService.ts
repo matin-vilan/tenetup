@@ -92,7 +92,6 @@ export const useAddService = ({ onSuccess, onClose }: UseAddServiceProps) => {
 
   const serviceType = useWatch({ control, name: "serviceType" });
 
-  // Custom register for serviceType with onChange handler
   const serviceTypeRegister = {
     ...register("serviceType"),
     onChange: (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -102,7 +101,6 @@ export const useAddService = ({ onSuccess, onClose }: UseAddServiceProps) => {
   };
 
   const onSubmit = (data: unknown) => {
-    console.log({ data });
     onSuccess?.(data as ServiceFormData);
     handleClose();
   };
